@@ -1,0 +1,40 @@
+.footer {
+    background-color: #ff9fcb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer-left, .footer-center, .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .footer-left p, .footer-center p {
+    margin: 0;
+    color: black;
+  }
+  
+  .app-store-icon {
+    width: 120px;
+    cursor: pointer;
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  .flamingo-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
