@@ -15,7 +15,11 @@ function SponsorForm() {
         <div className="form-group">
           <input type="email" placeholder="Contact Email" />
           <select>
-            <option value=""># people in attendance</option>
+          <option value="option1"># people in attendance</option>
+          <option value="option2">5</option>
+          <option value="option3">10</option>
+          <option value="option2">15</option>
+          <option value="option3">20</option>
           </select>
         </div>
 

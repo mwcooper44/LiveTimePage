@@ -1,40 +1,93 @@
 .footer {
-    background-color: #FF98C3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .footer-left, .footer-center, .footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .footer-left p, .footer-center p {
-    margin: 0;
-    color: black;
-  }
-  
-  .app-store-icon {
-    width: 120px;
-    cursor: pointer;
-  }
-  
-  .social-icon {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-  }
-  
-  .flamingo-icon {
-    width: 40px;
-    height: 40px;
-  }
-  
+  background-color: #FF98C3; /* Main pink background color */
+  padding: 1rem 2rem; /* Adjust padding for spacing */
+  display: flex;
+  justify-content: flex-start; /* Aligns items to the left */
+  align-items: center;
+  width: 100%;
+  border-top: 5px solid #ffafcd;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: flex-start; /* Keep items aligned left */
+  align-items: center;
+  gap: 1rem; /* Adjust space between sections */
+}
+
+.footer-left, .footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns content within each section to the left */
+  gap: 0.5rem;
+}
+
+.footer-left {
+  margin-right: 2rem; /* Space between left and center */
+}
+
+.footer-center {
+  margin-right: 2rem; /* Space between center and right */
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Vertically align icons */
+  gap: 0.5rem; /* Space between the icons */
+  margin-left: 50rem;
+}
+
+.footer-left p, .footer-center p {
+  margin: 0;
+  color: black;
+}
+
+.app-store-icon {
+  width: 120px;
+  cursor: pointer;
+}
+
+/* Set the same size for LinkedIn and Instagram icons */
+.Instagram-icon, .LinkedIn-icon {
+  width: 40px; /* Set equal width for Instagram and LinkedIn icons */
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Make Lynkr icon larger than the others */
+.lynkr-icon {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  margin-left: 0.1rem;
+}
+
+/* Vertical divider */
+.footer-divider {
+  width: 1px;
+  height: 50px;
+  background-color: white;
+  margin: 0 1.5rem; /* Space between the sections */
+}
+
+.footer-center a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-center a:hover {
+  color: #9a9adb;
+}
+
+.footer-right a {
+  display: inline-block;
+}
+
+.footer-right img {
+  cursor: pointer;
+}
+
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
