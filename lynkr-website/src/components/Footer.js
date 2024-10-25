@@ -5,11 +5,13 @@ function Footer() {
     <footer className="footer">
       <div className="footer-left">
         <p>Lynkr Inc.<br />All rights reserved</p>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg"
-          alt="App Store"
-          className="app-store-icon"
-        />
+          <a href="https://apps.apple.com/us/app/lynkr-app/id6463145067" target="_blank" rel="noopener noreferrer">
+            <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png"
+            alt="App Store Download"
+            className="app-store-icon"
+            />
+        </a>
       </div>
 
       <div className="footer-center">

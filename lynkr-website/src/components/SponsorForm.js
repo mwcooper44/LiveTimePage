@@ -3,6 +3,7 @@ import './SponsorForm.css'; // Import CSS for styling
 
 function SponsorForm() {
   return (
+    <div className="background">  {/* This div will apply the pink background */}
     <div className="form-container">
       <h1>Want to Sponsor a University Event through Lynkr?</h1>
       <form>
@@ -46,6 +47,7 @@ function SponsorForm() {
         <button type="submit" className="submit-button">Submit</button>
       </form>
     </div>
+  </div>
   );
 }
 
