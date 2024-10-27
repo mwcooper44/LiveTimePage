@@ -1,74 +1,42 @@
 .footer {
-  background-color: #FF98C3; /* Main pink background color */
+  background-color: #FF98C3; /* Main pink background */
   padding: 1rem 2rem; /* Adjust padding for spacing */
   display: flex;
-  justify-content: flex-start; /* Aligns items to the left */
-  align-items: center;
-  width: 100%;
+  align-items: center; /* Align items vertically */
+  width: 100%; /* Full width */
+  height: 80px; /* Fixed height */
   border-top: 5px solid #ffafcd;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000; /* Ensure footer stays on top */
 }
 
 .footer-content {
   display: flex;
-  justify-content: flex-start; /* Keep items aligned left */
+  width: 100%; /* Stretch content across the footer */
+  justify-content: space-between; /* Space between left content and right icons */
   align-items: center;
-  gap: 1rem; /* Adjust space between sections */
-}
-
-.footer-left, .footer-center {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Aligns content within each section to the left */
-  gap: 0.5rem;
 }
 
 .footer-left {
-  margin-right: 2rem; /* Space between left and center */
-}
-
-.footer-center {
-  margin-right: 2rem; /* Space between center and right */
-}
-
-.footer-right {
   display: flex;
-  flex-direction: row;
-  align-items: center; /* Vertically align icons */
-  gap: 0.5rem; /* Space between the icons */
-  margin-left: 50rem;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+  gap: 0.5rem; /* Space between lines */
 }
 
-.footer-left p, .footer-center p {
+.footer-left p {
   margin: 0;
   color: black;
 }
 
-.app-store-icon {
-  width: 120px;
-  cursor: pointer;
-}
-
-/* Set the same size for LinkedIn and Instagram icons */
-.Instagram-icon, .LinkedIn-icon {
-  width: 40px; /* Set equal width for Instagram and LinkedIn icons */
-  height: 40px;
-  cursor: pointer;
-}
-
-/* Make Lynkr icon larger than the others */
-.lynkr-icon {
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-  margin-left: 0.1rem;
-}
-
-/* Vertical divider */
-.footer-divider {
-  width: 1px;
-  height: 50px;
-  background-color: white;
-  margin: 0 1.5rem; /* Space between the sections */
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0rem;
 }
 
 .footer-center a {
@@ -80,14 +48,48 @@
   color: #9a9adb;
 }
 
-.footer-right a {
-  display: inline-block;
+/* Right-aligned icons */
+.footer-right {
+  display: flex;
+  align-items: center; /* Align icons vertically */
+  gap: 1rem; /* Space between icons */
+  margin-left: auto; /* Push the icons to the far right */
 }
 
 .footer-right img {
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 
+.lynkr-icon {
+  padding-right: 3rem;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+/* App store icon size */
+.app-store-icon {
+  width: 120px;
+  cursor: pointer;
+}
+
+/* Optional: Vertical divider */
+.footer-divider {
+  width: 1px;
+  height: 80px;
+  background-color: white;
+  margin: 0 1rem;
+}
+
+/* Ensure content stays above the footer */
+.content {
+  padding-bottom: 100px;
+}
+
 html, body {
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
