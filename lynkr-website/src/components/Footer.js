@@ -26,7 +26,7 @@ function Footer() {
         {/* Center Section */}
         <div className="footer-center">
           <p><strong>Contact</strong></p>
-          <a href="mailto:emilywheeler@linkrme.net">emilywheeler@linkrme.net</a>
+          <a href="mailto:emilywheeler@linkrme.net"><ins>emilywheeler@linkrme.net</ins></a>
         </div>
 
         {/* Right Section with Social Icons */}
