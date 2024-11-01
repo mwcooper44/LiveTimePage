@@ -1,8 +1,10 @@
 .form-container {
     background-color: white;
     padding: 2rem;
+    margin-top: 3rem;
     border-radius: 10px;
-    max-width: 800px;
+    width: 35vw;
+    max-width: 500px;
     margin: 3rem auto;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   }
@@ -13,6 +15,8 @@
     display: flex;
     justify-content: center;
     align-items: center;     
+    flex-direction: column;
+    min-height: 100vh; 
   }
   
   h1 {
@@ -20,24 +24,41 @@
     font-size: 2rem;
     color: black;
     margin-bottom: 1.5rem;
-    margin-top: 2rem;
+    margin-top: -1rem;
   }
-  
-  
   
   form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 1rem;
   }
   
   .form-group {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  
+  .form-group > div {
+    display: flex;
+    flex-direction: column;
   }
   
+  .form-group label {
+    margin-bottom: 1rem; /* Adjust the spacing as needed */
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 95%; /* Set a custom width */
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
   input, select {
     flex: 1;
     padding: 0.8rem;
@@ -63,5 +84,47 @@
   
   button.submit-button:hover {
     background-color: #333;
+  }
+  
+  .nav-button {
+    background-color: black;
+    color: white;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 0.5rem;
+  }
+  
+  .nav-button:hover {
+    background-color: #333;
+  }
+  
+  .form-navigation {
+    display: flex;
+    justify-content: space-between; /* Positions buttons on opposite ends when both are present */
+    margin-top: 1.5rem;
+  }
+  
+  .back-button-container {
+    flex: 1; /* Takes up space on the left when Back is present */
+  }
+  
+  .next-button-container {
+    display: flex;
+    justify-content: end; /* Ensures Next is on the right */
+  }
+  
+  .nav-button,
+  .submit-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
   
