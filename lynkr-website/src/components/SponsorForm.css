@@ -70,6 +70,20 @@
   input::placeholder {
     color: #aaa;
   }
+
+  .checkbox-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; /* Adjust the space between the label and checkbox */
+    margin: 1rem 0; /* Adds vertical space for the entire container */
+  }
+  
+  
+  .custom-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
   
   button.submit-button {
     background-color: black;
@@ -128,3 +142,16 @@
     cursor: pointer;
   }
   
+  
+  .shippingNotice input {
+    width: 50%;
+  }
+  .shippingNotice select {
+    width: 50%;
+  }
+
+  .example {
+    color: gray;
+    font-size: 14px;
+
+  }
