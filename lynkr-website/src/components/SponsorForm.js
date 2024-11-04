@@ -115,7 +115,7 @@ function SponsorForm() {
               <div>
                 <label htmlFor="sizeOfEvent">Ideal Size of Event:</label>
                 <select name="sizeOfEvent" value={formData.sizeOfEvent} onChange={handleChange} required>
-                  <option value="">ideal # of people in attendance</option>
+                  <option value="" disabled>ideal # of people in attendance</option>
                   <option value="0-25">0-25</option>
                   <option value="25-50">25-50</option>
                   <option value="50-100">50-100</option>
@@ -146,7 +146,7 @@ function SponsorForm() {
                 </div>
                 {showPhotosDropdown && (
                   <select name="photosRequired" value={formData.photosRequired} onChange={handleChange}>
-                    <option value=""># photos required</option>
+                    <option value="" disabled># photos required</option>
                     <option value="1-3">1-3</option>
                     <option value="3-5">3-5</option>
                     <option value="5-10">5-10</option>
@@ -161,7 +161,7 @@ function SponsorForm() {
                 </div>
                 {showVideosDropdown && (
                   <select name="videosRequired" value={formData.videosRequired} onChange={handleChange}>
-                    <option value=""># videos required</option>
+                    <option value="" disabled># videos required</option>
                     <option value="1-3">1-3</option>
                     <option value="3-5">3-5</option>
                     <option value="5-10">5-10</option>
@@ -195,7 +195,7 @@ function SponsorForm() {
                   onChange={handleChange}
                 />
                 <select name="shippingNoticePeriod" value={formData.shippingNoticePeriod} onChange={handleChange}>
-                    <option value="">period of time</option>
+                    <option value="" disabled>period of time</option>
                     <option value="day(s)">day(s)</option>
                     <option value="week(s)">week(s)</option>
                     <option value="month(s)">month(s)</option>
