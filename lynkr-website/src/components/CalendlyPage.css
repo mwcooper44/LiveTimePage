@@ -1,0 +1,23 @@
+.background {
+    background-color: #FE80B3; /* Bright pink background */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  .form-container {
+    background-color: white; /* White background for the form container */
+    padding: 2rem; /* Space inside the container */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 800px; /* Maximum width of the container */
+    margin: 2rem auto; /* Center the container horizontally with margin */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  h1 {
+    text-align: center; /* Center the header text */
+    font-size: 2rem; /* Font size for the header */
+    color: black; /* Color of the header text */
+    margin-bottom: 1.5rem; /* Space below the header */
+  }
