@@ -4,6 +4,8 @@ import SponsorForm from './components/SponsorForm';
 import ThankYou from './components/ThankYou';
 import Layout from './components/Layout'; // Import the Layout component
 import './App.css';
+import CalendlyPage from './components/CalendlyPage';
+
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<SponsorForm />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/calendly" element={<CalendlyPage />} />
         </Routes>
       </Layout>
     </Router>

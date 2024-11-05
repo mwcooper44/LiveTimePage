@@ -1,4 +1,5 @@
-import './Footer.css'; // Import CSS for the footer
+import './Footer.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -27,6 +28,7 @@ function Footer() {
         <div className="footer-center">
           <p><strong>Contact</strong></p>
           <a href="mailto:emilywheeler@linkrme.net"><ins>emilywheeler@linkrme.net</ins></a>
+          <p><Link to="/calendly" className="schedule-meeting-link">Schedule a Meeting</Link></p>
         </div>
 
         {/* Right Section with Social Icons */}
@@ -44,7 +46,6 @@ function Footer() {
           </a>
           <a
             href="https://www.instagram.com/lynkrapp/"
-            alt="Instagram Account"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -58,7 +59,6 @@ function Footer() {
             src="https://media.licdn.com/dms/image/v2/D4E0BAQGXomgXIq0Mqg/company-logo_200_200/company-logo_200_200/0/1708898115814/lynkr_app_logo?e=1738195200&v=beta&t=1i9jNLdjU5n-Ejzvh21DgaSJ_xz-bvy2_EVibtDww5k"
             alt="Lynkr Logo"
             className="lynkr-icon"
-            //style={{ paddingRight: '3rem' }}
           />
         </div>
       </div>
