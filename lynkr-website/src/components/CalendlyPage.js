@@ -1,13 +1,19 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './CalendlyPage.css'; // Import CSS for styling
+import { InlineWidget } from 'react-calendly';
+import './CalendlyPage.css'; // Import the CSS file
 
 function CalendlyPage() {
-const navigate = useNavigate();
-
   return (
-    <div className="background">  {/* This div will apply the pink background */} 
-        <button onClick={() => navigate('/')} className="home-button">Home</button>
+    <div className="container">
+      <div className="calendly-widget">
+        <InlineWidget url="https://calendly.com/emilyxxwheeler/lynkr" />
+      </div>
+      <button 
+        onClick={() => window.history.back()} 
+        className="button"
+      >
+        Home
+      </button>
     </div>
   );
 }
