@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SponsorForm.css';
 import axios from 'axios';
+import { useEffect } from 'react';
 function SponsorForm() {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -29,6 +30,15 @@ function SponsorForm() {
   const [isLoading, setIsLoading] = useState(false); // Added isLoading state
 
   const navigate = useNavigate();
+  
+
+  useEffect(() => {
+    const progressElement = document.querySelector('.progress');
+    if (progressElement) {
+      const progressPercentage = (currentStep / 6) * 100; // Update based on total steps
+      progressElement.style.width = `${progressPercentage}%`;
+    }
+  }, [currentStep]); // Trigger update whenever currentStep changes
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -411,9 +421,8 @@ function SponsorForm() {
             </div>
           )}
 
-          <div className="form-navigation">
-            {currentStep > 1 && (
-              <div className="back-button-container">
+            <div className="form-navigation">
+              {currentStep > 1 && (
                 <button
                   type="button"
                   onClick={prevStep}
@@ -422,9 +431,12 @@ function SponsorForm() {
                 >
                   Back
                 </button>
+              )}
+              <div className="progress-bar-container">
+                <div className="progress-bar">
+                  <div className="progress"></div>
+                </div>
               </div>
-            )}
-            <div className="next-button-container">
               {currentStep < 6 ? (
                 <button
                   type="button"
@@ -444,7 +456,6 @@ function SponsorForm() {
                 </button>
               )}
             </div>
-          </div>
         </form>
       </div>
     </div>
