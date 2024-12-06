@@ -28,7 +28,9 @@ function Footer() {
         <div className="footer-center">
           <p><strong>Contact</strong></p>
           <a href="mailto:emilywheeler@linkrme.net"><ins>emilywheeler@linkrme.net</ins></a>
-          <p><Link to="/calendly" className="schedule-meeting-link">Schedule a Meeting</Link></p>
+
+          <p><strong>Schedule a Meeting</strong></p>
+          <a href="/calendly"><ins>Calendly Link</ins></a>
         </div>
 
         {/* Right Section with Social Icons */}

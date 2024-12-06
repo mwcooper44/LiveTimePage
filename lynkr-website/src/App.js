@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SponsorForm from './components/SponsorForm';
 import ThankYou from './components/ThankYou';
+import CalendlyPage from './components/CalendlyPage';
 import Layout from './components/Layout'; // Import the Layout component
 import './App.css';
 import CalendlyPage from './components/CalendlyPage';

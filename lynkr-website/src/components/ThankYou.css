@@ -1,3 +1,7 @@
+* {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
 .form-container {
     background-color: white;
     padding: 2rem;
@@ -8,7 +12,7 @@
   }
 
   .background {
-    background-color: #FE80B3;
+    background-color: rgb(255, 219, 237);
     height: 100vh; 
     display: flex;
     justify-content: center;
@@ -19,8 +23,8 @@
     text-align: center;
     font-size: 2rem;
     color: black;
-    margin-bottom: 1.5rem;
-    margin-top: -2rem;
+
+    
   }
   
   form {
@@ -34,3 +38,48 @@
     justify-content: space-between;
     gap: 1rem;
   }
+
+
+  
+  .thank-you {
+    margin-bottom: -2rem;
+    margin-top: -5rem;
+  }
+  
+  .button {
+    background-color: black;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+  }
+  
+  .calendly-widget-thank-you {
+    border-top: 3rem;
+    width: 80vw;
+    max-width: 1000px;
+    height: 65vh; /* Adjusted height to ensure it fits */
+    max-height: 800px;
+    overflow: hidden;
+}
+  .calendly-widge-thank-you iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .button:hover {
+    background-color: #333;
+  }
+  .container {
+    background-color: #FE80B3;
+    height: 90vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; /* Evenly distribute space without large gaps */
+    padding: 10px 0;
+    box-sizing: border-box;
+}
