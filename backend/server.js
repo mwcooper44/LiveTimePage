@@ -1,4 +1,5 @@
 // backend/server.js
+require('dotenv').config();
 const nodemailer = require('nodemailer');
 const multer = require('multer');
 const fs = require('fs');
@@ -17,13 +18,25 @@ app.use(express.json());
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
+
+
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: process.env.SMTP_HOST,
+    port: process.env.SMTP_PORT,
+    secure: false, // Use true for 465, false for 587
     auth: {
-      user: process.env.EMAIL_USER, // Your email address from the .env file
-      pass: process.env.EMAIL_PASS, // Your email password or app password
-    },
-  });
+        user: process.env.SMTP_USER, // Gmail email address
+        pass: process.env.SMTP_PASS  // Gmail app password
+    }
+});
+
+transporter.verify((error, success) => {
+  if (error) {
+      console.error('SMTP Configuration Error:', error);
+  } else {
+      console.log('SMTP is ready to send emails:', success);
+  }
+});
 
 
 // Route to handle form submissions

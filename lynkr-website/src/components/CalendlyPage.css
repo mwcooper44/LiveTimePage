@@ -1,5 +1,5 @@
 .container {
-    background-color: #FE80B3;
+    background-color: rgb(255, 219, 237);
     height: 90vh; /* Full viewport height */
     display: flex;
     flex-direction: column;

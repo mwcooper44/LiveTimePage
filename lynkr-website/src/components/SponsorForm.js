@@ -132,9 +132,10 @@ function SponsorForm() {
 
   return (
     <div className="background">
-      <h1 style={{ paddingTop: '2rem', textAlign: 'center' }}>
-        Want to Sponsor a University Event Through Lynkr?
-      </h1>
+      <div class="header-container">
+        <h1 class="main-header">Want to Reach Campus Audiences?</h1>
+        <p class="sub-header">Tell us about your Brand:</p>
+      </div>
       <div className="form-container">
         <form onSubmit={handleSubmit}>
           {currentStep === 1 && (
@@ -164,7 +165,7 @@ function SponsorForm() {
                 />
               </div>
               <div>
-                <label htmlFor="coverImage">Upload a Cover Image</label>
+                <label htmlFor="coverImage">Upload an image for your brand</label>
                 <input
                   type="file"
                   id="coverImage"
@@ -179,12 +180,12 @@ function SponsorForm() {
             <div className="form-group">
               <div>
                 <label htmlFor="brandActivation">
-                  What does your Ideal Brand Activation Look Like?
+                  What does your ideal brand activation look like?
                 </label>
                 <input
                   type="text"
                   name="brandActivation"
-                  placeholder="Describe your Ideal Brand Activation:"
+                  placeholder="Describe your ideal brand activation:"
                   value={formData.brandActivation}
                   onChange={handleChange}
                   required
@@ -196,7 +197,7 @@ function SponsorForm() {
             <div className="form-group">
               <div>
                 <label htmlFor="exclusions">
-                  Are there Any Organizations you don't want to Sponsor?
+                  Are there any groups you don't want to work with?
                 </label>
                 <input
                   type="text"
@@ -229,33 +230,38 @@ function SponsorForm() {
                 </select>
               </div>
               <div>
-                <label>
-                  How much Product will you send for X number of People?
-                </label>
+                <label>How much product will you send?</label>
                 <label className="example">
-                  ex: We will send 2 cases of product for every 20 people in
-                  attendance.
-                </label>
-                <label>For every X number of people,</label>
-                <input
-                  type="text"
-                  name="numberOfPeople"
-                  placeholder="5, 25, 50 people"
-                  value={formData.numberOfPeople}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div>
-                <label>we will send Y of Product.</label>
-                <input
-                  type="text"
-                  name="amountOfProduct"
-                  placeholder="Please specify: 1 case, 5 boxes, 2 pallets, etc."
-                  value={formData.amountOfProduct}
-                  onChange={handleChange}
-                  required
-                />
+                    Ratio of Number of People to Number of Cases
+                  </label>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                  
+                  <div>
+                    <label></label>
+                    <input
+                      type="number"
+                      name="numberOfPeople"
+                      placeholder="people"
+                      value={formData.numberOfPeople}
+                      onChange={handleChange}
+                      required
+                      style={{ width: '100px' }}
+                    />
+                  </div>
+                  <div>:</div>
+                  <div>
+                    <label></label>
+                    <input
+                      type="text"
+                      name="amountOfProduct"
+                      placeholder="cases"
+                      value={formData.amountOfProduct}
+                      onChange={handleChange}
+                      required
+                      style={{ width: '150px' }}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           )}
@@ -340,7 +346,7 @@ function SponsorForm() {
           {currentStep === 6 && (
             <div className="form-group">
               <label htmlFor="shipping">
-                Event Notice Required for Shipping Product:
+                Event notice required for shipping product:
               </label>
               <div
                 style={{
@@ -378,7 +384,7 @@ function SponsorForm() {
               <div>
                 <div className="checkbox-container">
                   <label htmlFor="marketingCheckbox">
-                    Will you be providing Additional Marketing Materials?
+                    Will you be providing additional marketing materials?
                   </label>
                   <input
                     type="checkbox"
