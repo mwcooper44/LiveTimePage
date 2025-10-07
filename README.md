@@ -1,4 +1,4 @@
-# LynkrPT
+# Live Time Page
 
 This is the Brand Outreach Webpage for [Live Time](https://www.linkedin.com/in/emilyjwheeler/) a 'next generation social network focused on real life connection for groups'.
 
